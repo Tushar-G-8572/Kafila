@@ -1,0 +1,53 @@
+.join-trip-screen {
+  background: var(--color-background);
+  min-height: 100%;
+}
+
+.join-trip-screen__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--color-outline-variant);
+  position: sticky;
+  top: 0;
+  background: var(--color-background);
+  z-index: 10;
+}
+
+.join-trip-screen__title {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.join-trip-screen__body {
+  padding: var(--space-md);
+}
+
+.join-trip-screen__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-md);
+}
+
+.join-trip-screen__icon {
+  font-size: 40px;
+  text-align: center;
+}
+
+.join-trip-screen__desc {
+  font-size: var(--text-body-sm);
+  color: var(--color-on-surface-variant);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.join-trip-screen__error {
+  font-size: var(--text-body-sm);
+  color: var(--color-error);
+  text-align: center;
+  font-weight: 600;
+}

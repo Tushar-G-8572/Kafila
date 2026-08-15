@@ -1,5 +1,5 @@
 import riderModel from "../models/rider.model.js";
-import { generateToken } from "../services/generateToken.js";
+import { generateToken } from "../utils/generateToken.js";
 
 export async function handleGoogleSignUp(req,res) {
  try{

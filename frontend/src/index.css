@@ -1,1 +1,2 @@
-@import 'tailwindcss';
+/* Import global styles & design tokens — replaces old bare tailwindcss import */
+@import './styles/global.css';

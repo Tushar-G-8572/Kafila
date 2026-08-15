@@ -1,0 +1,36 @@
+.single-input-action {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: 100%;
+}
+
+.single-input-action__input {
+  font-size: var(--text-body-lg);
+}
+
+.single-input-action__btn {
+  margin-top: var(--space-xs);
+  font-size: var(--text-body-lg);
+}
+
+.single-input-action__hint {
+  font-size: var(--text-body-sm);
+  color: var(--color-outline);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Spinner */
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.single-input-action__spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}

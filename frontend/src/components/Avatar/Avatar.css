@@ -1,0 +1,10 @@
+/* Avatar component — minimal; layout handled by inline styles in JSX */
+.kafila-avatar {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.kafila-avatar__initials {
+  border-radius: 50%;
+  letter-spacing: 0.02em;
+}

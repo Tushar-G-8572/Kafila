@@ -1,0 +1,131 @@
+.my-trips-screen {
+  background: var(--color-background);
+  min-height: 100%;
+  overflow-y: auto;
+}
+
+.my-trips-screen__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--color-outline-variant);
+  position: sticky;
+  top: 0;
+  background: var(--color-background);
+  z-index: 10;
+}
+
+.my-trips-screen__title {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.my-trips-screen__list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Trip Row ──────────────────────────────────────────────── */
+.trip-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 14px var(--space-md);
+  width: 100%;
+  min-height: 72px;
+  background: var(--color-white);
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.trip-row:hover { background: var(--color-surface-low); }
+.trip-row:active { background: var(--color-surface-container); }
+
+/* Avatar wrapper — layered bike icon on top of initials avatar */
+.trip-row__avatar {
+  position: relative;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.trip-row__avatar > svg {
+  position: absolute;
+  bottom: -2px;
+  right: -4px;
+  background: var(--color-white);
+  border-radius: 50%;
+  padding: 2px;
+  box-shadow: var(--shadow-sm);
+}
+
+.trip-row__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  overflow: hidden;
+}
+
+.trip-row__name {
+  font-family: var(--font-headline);
+  font-size: var(--text-body-md);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trip-row__meta {
+  font-size: var(--text-body-sm);
+  color: var(--color-on-surface-variant);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trip-row__live-badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: #2a7a40;
+  background: #d4f0de;
+  border-radius: var(--radius-full);
+  padding: 1px 7px;
+  letter-spacing: 0.03em;
+}
+
+.trip-row__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+  color: var(--color-on-surface-variant);
+}
+
+.trip-row__id {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--color-outline);
+}
+
+/* Empty state */
+.my-trips-screen__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-xl);
+  color: var(--color-on-surface-variant);
+  text-align: center;
+  font-size: var(--text-body-md);
+  min-height: 60vh;
+}

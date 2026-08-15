@@ -1,0 +1,171 @@
+.home-screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-screen__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(16px) brightness(0.75);
+  transform: scale(1.06);
+  z-index: 0;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.home-screen__header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--space-md) var(--space-md) 0;
+}
+
+.home-screen__user-chip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 6px 14px 6px 6px;
+  border-radius: var(--radius-full);
+}
+
+.home-screen__user-name {
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--color-on-surface);
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Main ─────────────────────────────────────────────────── */
+.home-screen__main {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-md);
+}
+
+/* ── Hero text ────────────────────────────────────────────── */
+.home-screen__hero {
+  text-align: center;
+}
+
+.home-screen__title {
+  font-family: var(--font-headline);
+  font-size: clamp(40px, 10vw, 60px);
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.03em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  line-height: 1;
+}
+
+.home-screen__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  color: rgba(255,255,255,0.82);
+  margin-top: var(--space-xs);
+  text-shadow: 0 1px 6px rgba(0,0,0,0.2);
+}
+
+/* ── Action cards ─────────────────────────────────────────── */
+.home-screen__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  width: 100%;
+  max-width: 380px;
+}
+
+.home-screen__action-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  width: 100%;
+  min-height: 80px;
+  text-align: left;
+  cursor: pointer;
+  border: none;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.home-screen__action-card:hover {
+  background: rgba(255,255,255,0.84);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-1px);
+}
+
+.home-screen__action-card:active {
+  transform: scale(0.98);
+}
+
+.home-screen__action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.home-screen__action-icon--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.home-screen__action-icon--secondary {
+  background: var(--color-surface-container);
+  color: var(--color-primary);
+}
+
+.home-screen__action-title {
+  font-family: var(--font-headline);
+  font-size: var(--text-body-lg);
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.home-screen__action-desc {
+  font-size: var(--text-body-sm);
+  color: var(--color-on-surface-variant);
+  margin-top: 2px;
+}
+
+/* ── My Trips link ────────────────────────────────────────── */
+.home-screen__my-trips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  width: 100%;
+  max-width: 380px;
+  min-height: var(--touch);
+  border: none;
+  cursor: pointer;
+  color: var(--color-on-surface);
+  font-family: var(--font-headline);
+  font-size: var(--text-body-md);
+  font-weight: 600;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.home-screen__my-trips:hover {
+  background: rgba(255,255,255,0.84);
+}
+
+.home-screen__my-trips:active {
+  transform: scale(0.98);
+}

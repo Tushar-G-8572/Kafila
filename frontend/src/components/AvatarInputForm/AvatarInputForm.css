@@ -1,0 +1,112 @@
+.avatar-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-md);
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
+}
+
+.avatar-form__skip {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  color: var(--color-on-surface-variant);
+}
+
+.avatar-form__title {
+  font-family: var(--font-headline);
+  font-size: var(--text-headline-md);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  text-align: center;
+  margin-top: var(--space-xs);
+}
+
+.avatar-form__subtitle {
+  font-size: var(--text-body-sm);
+  color: var(--color-outline);
+  text-align: center;
+  line-height: 1.4;
+  margin-top: -8px;
+}
+
+/* ── Map marker preview ────────────────────────────────────── */
+.avatar-form__marker-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: var(--space-xs) 0;
+}
+
+.map-marker-pin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(0 4px 8px rgba(47,99,132,0.22));
+}
+
+.map-marker-pin__avatar {
+  background: white;
+  padding: 3px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.map-marker-pin__tail {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 14px solid var(--color-primary);
+  margin-top: -2px;
+}
+
+.map-marker-pin__label {
+  font-family: var(--font-headline);
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+  color: var(--color-on-surface);
+  background: rgba(255,255,255,0.9);
+  border-radius: var(--radius-full);
+  padding: 2px 10px;
+  box-shadow: var(--shadow-sm);
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Change photo button ───────────────────────────────────── */
+.avatar-form__change-photo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: var(--color-surface-low);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  border: 1.5px solid var(--color-outline-variant);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.avatar-form__change-photo:hover {
+  background: var(--color-surface-high);
+}
+
+/* ── Field + save ──────────────────────────────────────────── */
+.avatar-form__field {
+  width: 100%;
+}
+
+.avatar-form__save {
+  margin-top: var(--space-xs);
+}
